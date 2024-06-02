@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px; /* Increase the base font size */
+            background-color: black; /* Set background color to black */
+            color: white; /* Set text color to white */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 36px; /* Increase font size for the main title */
+            text-align: center; /* Center the main title */
+            padding: 20px 0;
+        }
+        nav {
+            background-color: black; /* Black background for the navigation bar */
+            padding: 20px; /* Increase padding for better appearance */
+        }
+        nav ul {
+            list-style-type: none; /* Remove bullets from the list */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Display list items in a row */
+            justify-content: center; /* Center the navigation items */
+        }
+        nav ul li {
+            margin: 0 30px; /* Increase space on left and right of each item */
+        }
+        nav ul li a {
+            color: white; /* White text color for links */
+            text-decoration: none; /* Remove underline from links */
+            font-size: 24px; /* Increase font size of the links */
+            cursor: pointer; /* Make the links look clickable */
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Underline links on hover */
+        }
+        h2 {
+            font-size: 30px; /* Increase font size for section titles */
+        }
+        p {
+            font-size: 22px; /* Increase font size for paragraphs */
+        }
+        #content {
+            padding: 20px;
+            text-align: center; /* Center the content */
+        }
+    </style>
+</head>
+<body>
+    <h1>Savo Prelog</h1>
+    <nav>
+        <ul>
+            <li><a id="projects-link">Projects</a></li>
+            <li><a id="contact-link">Contact</a></li>
+            <li><a id="aboutme-link">About Me</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        
+        <p>Welcome to the homepage. Click on the links above to see more content.</p>
+    </div>
+
+    <script>
+        document.getElementById('projects-link').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h2>Projects</h2>
+                <p>Details about projects go here.</p>
+            `;
+        });
+
+        document.getElementById('contact-link').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h2>Contact</h2>
+                <ul>
+    <li>Email: <a href="mailto:your-email@example.com">your-savoprelog899@gmail.com</a></li>
+    <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></li>
+    <li>X (formerly Twitter): <a href="https://twitter.com/yourusername" target="_blank">twitter.com/yourusername</a></li>
+    <li>Odysee: <a href="https://odysee.com/@yourusername" target="_blank">odysee.com/@yourusername</a></li>
+</ul>
+            `;
+        });
+
+        document.getElementById('aboutme-link').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h2>About Me</h2>
+                <br>
+                <p>Hi there! I'm someone who thrives on adventure and discovery. I like to take different roads to my common destinations.
+                     Capturing the essence of a moment and telling stories through my photos and writing is something I deeply enjoy.</p>
+    <p> I always strive to win and put in my best effort to come out on top. </p>
+<p>Overall, I'm someone who embraces life's adventures, competes with passion, and finds creative expression in the arts.</p>
+            `;
+        });
+    </script>
+</body>
+</html>
